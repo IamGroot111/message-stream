@@ -1,11 +1,10 @@
 Arr = [ (3,"you"), (2,"are"), (4,"?"), (1,"how")]
 class messque:
-    def __init__(self,):
+    def __init__(self):
         self.que=dict()
        
     def addtoque(self,x):
-        for i,mess in x:
-            self.que[i]=mess
+        self.que[x[0]]=x[1]
 
     def printque(self):
         c=1
@@ -16,4 +15,9 @@ class messque:
             else:
                 break
 
-mess1=messque()           
+mess1=messque()    
+
+for i in Arr:
+    mess1.addtoque(i)
+
+mess1.printque()

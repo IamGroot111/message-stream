@@ -1,5 +1,5 @@
 Arr = [ (3,"you"), (2,"are"), (4,"?"), (1,"how")]
-class MessQue:
+class MessageQueue:
     def __init__(self):
         self.__que=dict()
         self.__current=1
@@ -16,7 +16,7 @@ class MessQue:
     
         
 
-mess1=MessQue()   
+mess1=MessageQueue()   
 print(mess1.__dict__ )
 
 for i in Arr:

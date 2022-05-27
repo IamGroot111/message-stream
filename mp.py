@@ -1,21 +1,24 @@
 Arr = [ (3,"you"), (2,"are"), (4,"?"), (1,"how")]
-class messque:
+class MessQue:
     def __init__(self):
-        self.que=dict()
-        self.current=1
+        self.__que=dict()
+        self.__current=1
 
     def __check_and_print(self):
-        while(self.current in self.que):
-            print(self.que[self.current])
-            self.current+=1
+        while(self.__current in self.__que):
+            print(self.__que[self.__current])
+            self.__current+=1
 
     def add_to_que(self,data):
-        self.que[data[0]]=data[1]
+        i,mess=data
+        self.__que[i]=mess
         self.__check_and_print()
     
         
 
-mess1=messque()    
+mess1=MessQue()   
+print(mess1.__dict__ )
 
 for i in Arr:
     mess1.add_to_que(i)
+print(mess1.__dict__ )

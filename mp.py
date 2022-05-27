@@ -4,18 +4,18 @@ class messque:
         self.que=dict()
         self.current=1
 
-    def __printque(self):
-        while(self.que.get(self.current,"rip")!="rip"):
-            print(self.que.get(self.current,"rip"))
+    def __check_and_print(self):
+        while(self.current in self.que):
+            print(self.que[self.current])
             self.current+=1
 
-    def addtoque(self,data):
+    def add_to_que(self,data):
         self.que[data[0]]=data[1]
-        self.__printque()
+        self.__check_and_print()
     
         
 
 mess1=messque()    
 
 for i in Arr:
-    mess1.addtoque(i)
+    mess1.add_to_que(i)
